@@ -10,6 +10,9 @@ dependencies:
   react-server-dom-webpack:
     specifier: 18.3.0-canary-b30030471-20240117
     version: 18.3.0-canary-b30030471-20240117(react-dom@18.3.0-canary-b30030471-20240117)(react@18.3.0-canary-b30030471-20240117)(webpack@5.89.0)
+  swr:
+    specifier: ^2.2.4
+    version: 2.2.4(react@18.3.0-canary-b30030471-20240117)
   waku:
     specifier: 0.19.1
     version: 0.19.1(react-dom@18.3.0-canary-b30030471-20240117)(react-server-dom-webpack@18.3.0-canary-b30030471-20240117)(react@18.3.0-canary-b30030471-20240117)
@@ -1154,6 +1157,10 @@ packages:
     engines: {node: '>=6.0'}
     dev: false
 
+  /client-only@0.0.1:
+    resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: false
+
   /color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
     dependencies:
@@ -1994,6 +2001,16 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
+  /swr@2.2.4(react@18.3.0-canary-b30030471-20240117):
+    resolution: {integrity: sha512-njiZ/4RiIhoOlAaLYDqwz5qH/KZXVilRLvomrx83HjzCWTfa+InyfAjv05PSFxnmLzZkNO9ZfvgoqzAaEI4sGQ==}
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      client-only: 0.0.1
+      react: 18.3.0-canary-b30030471-20240117
+      use-sync-external-store: 1.2.0(react@18.3.0-canary-b30030471-20240117)
+    dev: false
+
   /tailwindcss@3.4.1:
     resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}
     engines: {node: '>=14.0.0'}
@@ -2118,6 +2135,14 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.3.1
+    dev: false
+
+  /use-sync-external-store@1.2.0(react@18.3.0-canary-b30030471-20240117):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.3.0-canary-b30030471-20240117
     dev: false
 
   /util-deprecate@1.0.2:
